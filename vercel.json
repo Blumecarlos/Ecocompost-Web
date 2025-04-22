@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "EMAIL_USER": "blumecarlinhos@gmail.com",
+    "EMAIL_PASSWORD": "znbr xuwj ovxb cigr",
+    "EMAIL_TO": "blumecarlinhos@gmail.com"
+  }
+} 

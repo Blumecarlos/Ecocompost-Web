@@ -1,9 +1,16 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+interface EmailData {
+  nome: string;
+  email: string;
+  empresa: string;
+  mensagem: string;
+}
+
 export async function POST(request: Request) {
   try {
-    const { nome, email, empresa, mensagem } = await request.json();
+    const { nome, email, empresa, mensagem }: EmailData = await request.json();
 
     // Validação básica dos campos
     if (!nome || !email || !empresa || !mensagem) {
