@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 const images = [
-  { src: "/react.webp", alt: "React" },
+  { src: "/react-1-logo-png-transparent.png", alt: "React" },
   { src: "/homis.png", alt: "Homis" },
   { src: "/typescript.svg", alt: "TypeScript" },
   { src: "/reciclagem-logo-1.png", alt: "Reciclagem" }
