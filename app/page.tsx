@@ -1,11 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import EndlessScroll from "./components/EndlessScroll";
+import ImageModal from "./components/ImageModal";
 
 export default function HomePage() {
+  const [selectedImage, setSelectedImage] = useState<{
+    image: string;
+    title: string;
+    description: string;
+  } | null>(null);
+
+  const handleImageClick = (image: string, title: string, description: string) => {
+    setSelectedImage({ image, title, description });
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Cabeçalho */}
@@ -21,7 +37,7 @@ export default function HomePage() {
                   height={40}
                   className="rounded-full border-2 border-green-500/20"
                 />
-                <h1 className="text-2xl font-bold text-white bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Ecocompost</h1>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent">Ecocompost</h1>
               </Link>
             </div>
             <div className="flex items-center gap-8">
@@ -195,19 +211,19 @@ export default function HomePage() {
                 name: "Carlos Blume",
                 role: "Desenvolvedor Full Stack",
                 description: "Responsável pelo desenvolvimento do aplicativo e integração com sensores.",
-                image: "/homis.png"
+                image: "/me.png"
               },
               {
-                name: "João Silva",
+                name: "Darlan Naressi",
                 role: "Especialista em Compostagem",
                 description: "Consultor técnico especializado em processos de compostagem.",
-                image: "/homis.png"
+                image: "/dan.png"
               },
               {
-                name: "Maria Santos",
+                name: "Hannah Schmitz",
                 role: "Designer UX/UI",
                 description: "Criadora da experiência do usuário e interface do aplicativo.",
-                image: "/homis.png"
+                image: "/hanna.webp"
               }
             ].map((membro, index) => (
               <motion.div
@@ -253,34 +269,34 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Dashboard Principal",
-                description: "Visão geral completa da sua composteira",
-                image: "/eco.jpg"
+                title: "App Ecocompost©",
+                description: "O aplicativo Ecocompost© é uma ferramenta inteligente que permite monitorar e gerenciar a compostagem de forma eficiente.",
+                image: "/UXUI Ecocompost-App-Page-1.png"
               },
               {
-                title: "Monitoramento em Tempo Real",
-                description: "Acompanhe temperatura e umidade",
-                image: "/eco.jpg"
+                title: "Tela de Cadastro",
+                description: "Crie sua conta para começar a usar o aplicativo",
+                image: "/UXUI Ecocompost-App-Page-2.png"
               },
               {
-                title: "Alertas Inteligentes",
-                description: "Notificações personalizadas",
-                image: "/eco.jpg"
+                title: "Tela de Login",
+                description: "Faça login para acessar o aplicativo",
+                image: "/UXUI Ecocompost-App-Page-3.png"
               },
               {
-                title: "Relatórios Detalhados",
-                description: "Análise completa do desempenho",
-                image: "/eco.jpg"
+                title: "Tela de Informações",
+                description: "Acompanhe o histórico de compostagem, e ajuste a temperatura e umidade da composteira conforme necessário",
+                image: "/UXUI Ecocompost-App-Page-4.png"
               },
               {
-                title: "Configurações",
-                description: "Personalize suas preferências",
-                image: "/eco.jpg"
+                title: "Conexão com a composteira",
+                description: "Conecte sua composteira ao aplicativo",
+                image: "/UXUI Ecocompost-App-Page-5.png"
               },
               {
-                title: "Histórico",
-                description: "Acompanhe a evolução",
-                image: "/eco.jpg"
+                title: "Usuário",
+                description: "Personalize o aplicativo do seu jeito!",
+                image: "/UXUI Ecocompost-App-Page-6.png"
               }
             ].map((item, index) => (
               <motion.div
@@ -288,20 +304,27 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.05 }}
                 className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative aspect-video overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
-                    fill
-                    className="object-cover transition duration-300 hover:scale-105"
+                    width={800}
+                    height={450}
+                    className="object-cover w-full h-full transition duration-300 hover:scale-125"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-6">
-                    <div>
+                    <div className="w-full">
                       <h3 className="text-white text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-white/90">{item.description}</p>
+                      <p className="text-white/90 mb-4">{item.description}</p>
+                      <button
+                        onClick={() => handleImageClick(item.image, item.title, item.description)}
+                        className="px-4 py-2 bg-green-600/80 text-white rounded-lg hover:bg-green-600 transition duration-300 text-sm"
+                      >
+                        Saiba mais
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -314,6 +337,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={handleCloseModal}
+          imageUrl={selectedImage.image}
+          title={selectedImage.title}
+          description={selectedImage.description}
+        />
+      )}
 
       {/* Footer */}
       <footer className="relative bg-gray-950 py-12 overflow-hidden">
@@ -328,7 +361,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-white text-lg font-semibold mb-4 relative">
-                Ecocompost
+                <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent">Ecocompost</span>
                 <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-green-500 to-transparent"></div>
               </h3>
               <p className="text-gray-400">
