@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ecocompost - Sistema de Compostagem Inteligente
 
-## Getting Started
+## Copyright © 2024 Ecocompost
 
-First, run the development server:
+Todos os direitos reservados. Este software e sua documentação são propriedade intelectual de:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Carlos Blume (COO e Desenvolvedor Full Stack)
+- Darlan Naressi (CEO e Engenheiro de Desenvolvimento)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Detalhes do Sistema
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O Ecocompost é um sistema inovador que combina tecnologia e sustentabilidade para transformar a compostagem em uma experiência digital e eficiente. O sistema inclui:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Aplicativo móvel para monitoramento em tempo real
+- Integração com sensores de temperatura e umidade
+- Dashboard intuitivo para acompanhamento do processo
+- Alertas inteligentes para otimização da compostagem
 
-## Learn More
+### Direitos de Propriedade Intelectual
 
-To learn more about Next.js, take a look at the following resources:
+Este software e todo o seu conteúdo, incluindo mas não limitado a:
+- Código fonte
+- Interface do usuário
+- Documentação
+- Design
+- Logotipos
+- Nome da marca
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+São protegidos por leis de direitos autorais e propriedade intelectual. Nenhuma parte deste software pode ser reproduzida, distribuída ou transmitida de qualquer forma ou por qualquer meio, incluindo fotocópia, gravação ou outros métodos eletrônicos ou mecânicos, sem a permissão prévia por escrito dos proprietários.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Contato
 
-## Deploy on Vercel
+Para informações sobre licenciamento, parcerias ou dúvidas sobre direitos autorais, entre em contato:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Email: contato@ecocompost.com.br
+- Instagram: [@projeto_c.e.b.o](https://www.instagram.com/projeto_c.e.b.o/)
+- GitHub: [@Blumecarlos](https://github.com/Blumecarlos)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### Apoie o Projeto
+
+Para apoiar o desenvolvimento do Ecocompost, acesse:
+[LivePix - Composteira Elétrica](https://livepix.gg/composteiraeletrica)

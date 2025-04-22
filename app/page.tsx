@@ -42,10 +42,11 @@ export default function HomePage() {
             </div>
             <div className="flex items-center gap-8">
               <div className="hidden md:flex space-x-8">
-                <Link href="#beneficios" className="text-gray-300 hover:text-green-400 transition duration-300 font-medium">Benefícios</Link>
-                <Link href="#porque-usar" className="text-gray-300 hover:text-green-400 transition duration-300 font-medium">Por que usar?</Link>
-                <Link href="#equipe" className="text-gray-300 hover:text-green-400 transition duration-300 font-medium">Equipe</Link>
-                <Link href="#contato" className="text-gray-300 hover:text-green-400 transition duration-300 font-medium">Contato</Link>
+                <Link href="/" className="text-gray-300 hover:text-green-400 transition duration-300 font-medium">Home</Link>
+                <Link href="/faq" className="text-gray-300 hover:text-green-400 transition duration-300 font-medium">FAQ</Link>
+                <Link href="/blog" className="text-gray-300 hover:text-green-400 transition duration-300 font-medium">Blog</Link>
+                <Link href="/parcerias" className="text-gray-300 hover:text-green-400 transition duration-300 font-medium">Parcerias</Link>
+                <Link href="/apoie" className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300 font-medium">Apoie</Link>
               </div>
             </div>
           </div>
@@ -105,6 +106,33 @@ export default function HomePage() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Impact Message Section */}
+      <section className="relative py-32 overflow-hidden bg-gray-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-gray-900 to-green-900/20"></div>
+        <div className="absolute inset-0 bg-[url('/eco.jpg')] bg-cover bg-center opacity-10"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+              "O futuro não é apenas verde, é inteligente. 
+              <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                Unimos tecnologia e sustentabilidade para transformar resíduos em recursos, 
+                conectando cada ação individual a um impacto global."
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 mt-8">
+              Cada composto que você monitora, cada alerta que você recebe, 
+              é um passo em direção a um planeta mais equilibrado e consciente.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -205,25 +233,19 @@ export default function HomePage() {
       <section id="equipe" className="py-20 bg-gray-800">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-16 text-white">Nossa Equipe</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
                 name: "Carlos Blume",
-                role: "Desenvolvedor Full Stack",
+                role: "COO e Desenvolvedor Full Stack",
                 description: "Responsável pelo desenvolvimento do aplicativo e integração com sensores.",
-                image: "/me.png"
+                image: "/carlos.jpeg"
               },
               {
                 name: "Darlan Naressi",
-                role: "Especialista em Compostagem",
-                description: "Consultor técnico especializado em processos de compostagem.",
-                image: "/dan.png"
-              },
-              {
-                name: "Hannah Schmitz",
-                role: "Designer UX/UI",
-                description: "Criadora da experiência do usuário e interface do aplicativo.",
-                image: "/hanna.webp"
+                role: "CEO e Engenheiro de Desenvolvimento",
+                description: "Responsável pela estratégia e desenvolvimento do projeto na parte de hardwares.",
+                image: "/darlan.jpeg"
               }
             ].map((membro, index) => (
               <motion.div
@@ -407,7 +429,7 @@ export default function HomePage() {
               </h3>
               <div className="space-y-2">
                 <p className="text-gray-400 group">
-                  contato@ecocompost.com.br
+                  blumec103@gmail.com
                   <span className="block w-0 group-hover:w-full h-px bg-gradient-to-r from-green-500 to-transparent transition-all duration-300"></span>
                 </p>
                 <p className="text-gray-400 group">
@@ -422,15 +444,15 @@ export default function HomePage() {
                 <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-green-500 to-transparent"></div>
               </h3>
               <div className="flex space-x-4">
-                <a href="https://twitter.com/ecocompost" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition duration-300 group">
+                <a href="https://github.com/Blumecarlos" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition duration-300 group">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
                   <span className="block w-0 group-hover:w-full h-px bg-gradient-to-r from-green-500 to-transparent transition-all duration-300"></span>
                 </a>
-                <a href="https://www.threads.net/@ecocompost" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition duration-300 group">
+                <a href="https://www.youtube.com/watch?v=AGAHzD8c2I8" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition duration-300 group">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                   <span className="block w-0 group-hover:w-full h-px bg-gradient-to-r from-green-500 to-transparent transition-all duration-300"></span>
                 </a>
