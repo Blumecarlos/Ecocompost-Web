@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +27,77 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos específicos para modo dark */
+.dark .bg-white {
+  background-color: #1a1a1a;
+}
+
+.dark .text-black {
+  color: #ededed;
+}
+
+.dark .bg-green-50 {
+  background-color: #0d1a0d;
+}
+
+.dark .bg-green-100 {
+  background-color: #0a1a0a;
+}
+
+.dark .bg-green-200 {
+  background-color: #0a2a0a;
+}
+
+.dark .bg-green-800 {
+  background-color: #001a00;
+}
+
+.dark .text-green-200 {
+  color: #a0d9a0;
+}
+
+.dark .border-green-700 {
+  border-color: #004d00;
+}
+
+.dark .bg-green-700 {
+  background-color: #004d00;
+}
+
+.dark .bg-green-600 {
+  background-color: #006600;
+}
+
+.dark .hover\:bg-green-700:hover {
+  background-color: #003d00;
+}
+
+.dark .hover\:text-white:hover {
+  color: #ffffff;
+}
+
+.dark .placeholder-green-300::placeholder {
+  color: #80b380;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% / 6));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+  animation-play-state: running;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
 }
