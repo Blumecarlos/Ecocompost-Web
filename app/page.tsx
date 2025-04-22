@@ -122,10 +122,10 @@ export default function HomePage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
-              "O futuro não é apenas verde, é inteligente. 
+              &quot;O futuro não é apenas verde, é inteligente. 
               <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
                 Unimos tecnologia e sustentabilidade para transformar resíduos em recursos, 
-                conectando cada ação individual a um impacto global."
+                conectando cada ação individual a um impacto global.&quot;
               </span>
             </h2>
             <p className="text-xl text-gray-300 mt-8">
