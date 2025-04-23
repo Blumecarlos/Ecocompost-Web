@@ -13,6 +13,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     { href: "/", label: "Home" },
     { href: "/faq", label: "FAQ" },
     { href: "/blog", label: "Blog" },
+    { href: "/parcerias", label: "Parcerias" },
     { href: "/apoie", label: "Apoie" },
   ];
 

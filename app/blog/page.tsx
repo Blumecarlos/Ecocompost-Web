@@ -21,12 +21,6 @@ export default function BlogPage() {
               />
               <h1 className="text-2xl font-bold text-white bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Ecocompost</h1>
             </Link>
-            <Link 
-              href="/"
-              className="text-gray-300 hover:text-green-400 transition duration-300 font-medium"
-            >
-              Voltar para Home
-            </Link>
           </div>
         </nav>
       </header>
@@ -207,6 +201,19 @@ export default function BlogPage() {
           </section>
         </motion.div>
       </main>
+
+      <footer id="footer" className="bg-gray-950 py-12">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-center">
+            <Link 
+              href="/"
+              className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300 font-medium"
+            >
+              Voltar para Home
+            </Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 } 
