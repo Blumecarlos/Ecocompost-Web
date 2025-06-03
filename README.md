@@ -44,4 +44,4 @@ Para apoiar o desenvolvimento do Ecocompost, acesse:
 
 ### Site
 
-Acesse o site: Ecocompost(https://ecocompost.com.br)
+Acesse o site: https://ecocompost.com.br
