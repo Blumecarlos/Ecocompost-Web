@@ -41,3 +41,7 @@ Para informações sobre licenciamento, parcerias ou dúvidas sobre direitos aut
 
 Para apoiar o desenvolvimento do Ecocompost, acesse:
 [LivePix - Composteira Elétrica](https://livepix.gg/composteiraeletrica)
+
+### Site
+
+Acesse o site: Ecocompost(https://ecocompost.com.br)
